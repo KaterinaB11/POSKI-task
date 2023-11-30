@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 10em;
+  background-color: $lightblack;
+  width: 100vw;
+
+  .header__burger-menu {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 10;
+    cursor: pointer;
+
+    .burger-line {
+      display: block;
+      width: 2rem;
+      height: 0.25rem;
+      border-radius: 2em;
+      background-color: white;
+      transform-origin: 1px;
+      transition: all 0.3s linear;
+      margin-bottom: 0.4rem;
+    }
+  }
+  .header__links {
+    display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+
+        .header__link {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: large;
+  }
+}
+  .header__logo{
+    width: 10vw;
+    
+  }
+
+  .header__search-icon{
+    width: 2vw;
+  }
+
+}

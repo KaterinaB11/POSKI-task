@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 10em;
+    background-color: $black;
+    width: 100vw;
+    .footer__text{
+        color: lightgray;
+        font-size: 0.6em;
+        opacity: 0.8;
+    }
+    .footer__logo{
+        width: 5vw;
+        opacity: 0.8;
+        
+      }
+}
