@@ -1,0 +1,45 @@
+.main__sidelinks {
+    width: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: fixed;
+    top: 9em;
+    left: 4.5em;
+    
+    .sidelink-icon {
+      width: 1.2em;
+      opacity: 0.7;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .main__sidelinks {
+        top: 9em;
+        left: 2em;
+        }
+      }
+  
+  
+  @media (max-width: 768px) {
+    .main__sidelinks {
+      flex-direction: row;
+      position: absolute;
+      top: 5em;
+      left: 2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main__sidelinks {
+      top: 5.2em;
+      left: 1em;
+    }
+  }
+    
+  

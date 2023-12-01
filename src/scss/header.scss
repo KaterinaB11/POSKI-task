@@ -48,10 +48,9 @@ header {
       //   transform: scale(1.2);
       // }
       &.active {
-        background-color: $purple; 
+        background-color: $purple;
         border-radius: 0.2em;
         padding: 0.3em 0.8em;
-        
       }
     }
   }
@@ -61,5 +60,62 @@ header {
 
   .header__search-icon {
     width: 2vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 2em 5em;
+
+    .header__links {
+      gap: 1.5em;
+
+      .header__link {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 2em 2em;
+
+    .header__links {
+      gap: 1em;
+
+      .header__link {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1em 1em;
+
+    .header__burger-menu {
+      width: 1em;
+      height: 1.3em;
+
+      .burger-line {
+        width: 1em;
+        height: 0.8em;
+        border-radius: 1em;
+      }
+    }
+    .header__links {
+      gap: 1em;
+      position: absolute;
+      top: 3em;
+    }
+    .header__logo {
+      width: 15vw;
+    }
+
+    .header__search-icon {
+      width: 5vw;
+    }
   }
 }

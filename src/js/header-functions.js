@@ -21,7 +21,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Close button functionality
 closeButton.addEventListener("click", () => {
   headerLinks.classList.remove("active");
 });
