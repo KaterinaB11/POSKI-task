@@ -6,7 +6,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Testovací úloha - Kateřina Bouchalová</title>
     <link rel="stylesheet" href="/src/scss/style.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,18 +14,20 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="/src/js/index.js"></script>
+    <script type="module" src="/src/js/header-functions.js"></script>
+    <script type="module" src="/src/js/console-log-functions.js"></script>
   </head>
   <!-- -------------------------------------------------------------------------------------------- -->
   <body>
     <header>
-      <div class="header__burger-menu">
+      <div class="header__burger-menu" id="burger-menu">
         <div class="burger-line"></div>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
       </div>
 
-      <nav class="header__links">
+      <nav class="header__links" id="header-links">
+        <button id="close-button" class="close-button"><strong>X</strong></button>
         <a class="header__link" href="#">Home</a>
         <a class="header__link" href="#">News</a>
         <a class="header__link" href="#">Authors</a>
@@ -37,7 +39,11 @@
         <img class="header__logo-the" src="./img/logo.svg" alt="The Blog" />
       </div>
       <div class="header__search">
-        <img class="header__search-icon" src="./img/icons8-magnifying-glass.svg" alt="search" />
+        <img
+          class="header__search-icon"
+          src="./img/icons8-magnifying-glass.svg"
+          alt="search"
+        />
       </div>
     </header>
 
@@ -46,67 +52,106 @@
     <main>
       <div class="main__content">
         <div class="main__sidelinks">
-            <object data="./img/icons8-facebook-f.svg" type="image/svg+xml" class="sidelink-icon" >
-            </object>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+              src="./img/icons8-facebook-f.svg"
+              alt="Facebook"
+              class="sidelink-icon"
+            />
+          </a>
 
-            <object data="./img/icons8-twitter.svg" type="image/svg+xml" class="sidelink-icon" >
-            </object>
-            
-            <object data="./img/icons8-instagram.svg" type="image/svg+xml" class="sidelink-icon" >
-            </object>
+          <a href="https://twitter.com/?lang=cs" target="_blank">
+            <img
+              src="./img/icons8-twitter.svg"
+              alt="Twitter"
+              class="sidelink-icon"
+            />
+          </a>
 
-            <object data="./img/icons8-share.svg" type="image/svg+xml" class="sidelink-icon" >
-            </object>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src="./img/icons8-instagram.svg"
+              alt="Instagram"
+              class="sidelink-icon"
+            />
+          </a>
+
+          <a href="#" target="_blank">
+            <img
+              src="./img/icons8-share.svg"
+              alt="Share"
+              class="sidelink-icon"
+            />
+          </a>
         </div>
 
         <div class="main__main-content">
           <div class="main__row">
-            <div class="main__container wide-img">
-              <img src="./img/article1.jpg" alt="Etiam quis quam" />
-              <p class="main__container-tag">TRAVEL</p>
-              <h2 class="main__container-heading">
-                Etiam quis quam. Nemo enim ipsam voluptatem quia
-              </h2>
-              <p class="main__container-datetime">May 25, 2048 / 9 min.</p>
+            <div class="main__container wide-img" id="post">
+              <a href="#">
+                <img src="./img/article1.jpg" alt="Etiam quis quam" />
+                <p class="main__container-tag">TRAVEL</p>
+                <h2 class="main__container-heading">
+                  Etiam quis quam. Nemo enim ipsam voluptatem quia
+                </h2>
+                <p class="main__container-datetime">May 25, 2048 / 9 min.</p>
+              </a>
             </div>
 
             <div class="main__container static-banner">
-              <img
-                src="./img/Snímek obrazovky 2023-11-29 v 12.38.03.png"
-                alt="Content from different universe"
-              />
+              <a href="#" target="_blank">
+                <img
+                  src="./img/Snímek obrazovky 2023-11-29 v 12.38.03.png"
+                  alt="Content from different universe"
+                />
+              </a>
             </div>
           </div>
 
           <div class="main__row">
-              <div class="main__column">
-                  <div class="main__container wide-img-half">
-                    <img src="./img/article2.jpg" alt="Etiam quis quam" />
-                    <p class="main__container-tag">TRAVEL</p>
-                    <h2 class="main__container-heading">
-                      Etiam quis quam. Nemo enim ipsam voluptatem quia
-                    </h2>
-                    <p class="main__container-datetime">January 10, 2048 / 4 min. </p>
-                  </div>
-        
-                  <div class="main__container wide-img-half">
-                    <img src="./img/article3.jpg" alt="Etiam quis quam" />
-                    <p class="main__container-tag" style="background-color: #7028E4; color: white;">TECH</p>
-                    <h2 class="main__container-heading">
-                      Etiam quis quam. Nemo enim ipsam voluptatem quia
-                    </h2>
-                    <p class="main__container-datetime">October 20, 2047 / 5 min.</p>
-                  </div>
+            <div class="main__column">
+              <div class="main__container wide-img-half" id="post">
+                <a href="#">
+                  <img src="./img/article2.jpg" alt="Etiam quis quam" />
+                  <p class="main__container-tag">TRAVEL</p>
+                  <h2 class="main__container-heading">
+                    Etiam quis quam. Nemo enim ipsam voluptatem quia
+                  </h2>
+                  <p class="main__container-datetime">
+                    January 10, 2048 / 4 min.
+                  </p>
+                </a>
               </div>
-    
-              <div class="main__container wide-img">
+
+              <div class="main__container wide-img-half" id="post">
+                <a href="#">
+                  <img src="./img/article3.jpg" alt="Etiam quis quam" />
+                  <p
+                    class="main__container-tag"
+                    style="background-color: #7028e4; color: white"
+                  >
+                    TECH
+                  </p>
+                  <h2 class="main__container-heading">
+                    Etiam quis quam. Nemo enim ipsam voluptatem quia
+                  </h2>
+                  <p class="main__container-datetime">
+                    October 20, 2047 / 5 min.
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="main__container wide-img" id="post">
+              <a href="#">
                 <img src="./img/article4.jpg" alt="Etiam quis quam" />
                 <p class="main__container-tag">TRAVEL</p>
                 <h2 class="main__container-heading">
                   Etiam quis quam. Nemo enim ipsam voluptatem quia
                 </h2>
                 <p class="main__container-datetime">August 20, 2047 / 8 min.</p>
-              </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

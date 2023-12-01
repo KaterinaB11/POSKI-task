@@ -8,93 +8,75 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    position: absolute;
+    position: fixed;
     top: 9em;
     left: 4.5em;
-
+    
     .sidelink-icon {
-      width: 1em;
+      width: 1.2em;
       opacity: 0.7;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
   .main__main-content {
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 1em;
     width: 100vw;
     height: 60vw;
 
     .main__row {
       display: flex;
       flex-direction: row;
-      gap: 0.6em;
+      gap: 1em;
       height: 28vw;
 
       .main__container {
         position: relative;
         overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.03);
+        }
+        
         &.wide-img {
           width: 100%;
           height: auto;
           .main__container-tag {
-            position: absolute;
-            top: 0.5em;
-            left: 2em;
-            background-color: $green;
-            padding: 0.5em 1.5em;
-            font-weight: 600;
-            font-size: 0.7em;
+            @include tag;
           }
 
           .main__container-heading {
-            position: absolute;
-            bottom: 4em;
-            left: 2em;
-            font-size: 1rem;
-            font-weight: 500;
-
-            color: #fff;
-            width: 40%;
+            @include heading-wide;
           }
 
           .main__container-datetime {
-            position: absolute;
-            bottom: 4em;
-            left: 3em;
-            color: lightgray;
-            font-size: 0.6em;
+            @include datetime-wide;
+          }
+          &:after {
+            @include after;
           }
         }
         &.wide-img-half {
           width: auto;
           height: 70%;
           .main__container-tag {
-            position: absolute;
-            top: 0.5em;
-            left: 2em;
-            background-color: $green;
-            padding: 0.5em 1.5em;
-            font-weight: 600;
-            font-size: 0.7em;
+            @include tag;
           }
 
           .main__container-heading {
-            position: absolute;
-            bottom: 2em;
-            left: 2em;
-            font-size: 0.8rem;
-            font-weight: 500;
-
-            color: #fff;
-            width: 70%;
+            @include heading-half;
           }
 
           .main__container-datetime {
-            position: absolute;
-            bottom: 1em;
-            left: 2.5em;
-            color: lightgray;
-            font-size: 0.6em;
+            @include datetime-half;
+          }
+          &:after {
+            @include after;
           }
         }
         &.static-banner {
@@ -106,13 +88,14 @@
           height: 100%;
           object-fit: cover;
           opacity: 0.8;
+          
         }
       }
     }
     .main__column {
       display: flex;
       flex-direction: column;
-      gap: 0.6em;
+      gap: 1em;
     }
   }
 }
